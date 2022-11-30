@@ -3,6 +3,7 @@ import sqlite3
 import json
 import os
 import matplotlib.pyplot as plt
+import tables
 # starter code
 
 # Create Database
@@ -16,7 +17,7 @@ def setUpDatabase(db_name):
 # TASK 1
 # CREATE TABLE FOR EMPLOYEE INFORMATION IN DATABASE AND ADD INFORMATION
 def create_employee_table(cur, conn):
-    pass
+    CREATE TABLE [IF NOT EXISTS] employees_list("employee_id" int, "first_name" str, "last_name" str,"hire_date" str,"job_id" int,"salary" int);
 
 # ADD EMPLOYEE'S INFORMTION TO THE TABLE
 
