@@ -53,10 +53,12 @@ def job_and_hire_date(cur, conn):
 # TASK 3: IDENTIFY PROBLEMATIC SALARY DATA
 # Apply JOIN clause to match individual employees
 def problematic_salary(cur, conn):
+    cur.execute('select employees.first_name, employees.last_name from employees join jobs on jobs.job_id = empolyees.job_id where employees.salary < jobs.min_salary or employees.salary > jobs.max_salary')
     pass
 
 # TASK 4: VISUALIZATION
 def visualization_salary_data(cur, conn):
+    #i got no clue how to do this
     pass
 
 class TestDiscussion12(unittest.TestCase):
